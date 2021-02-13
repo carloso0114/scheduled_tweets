@@ -83,6 +83,7 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (4.1.0)
     i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -105,6 +106,20 @@ GEM
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
+    oauth (0.5.5)
+    omniauth (2.0.2)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+      rack-protection
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
+    omniauth-rails_csrf_protection (1.0.0)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     public_suffix (4.0.6)
     puma (5.2.1)
       nio4r (~> 2.0)
@@ -112,6 +127,8 @@ GEM
     rack (2.2.3)
     rack-mini-profiler (2.3.1)
       rack (>= 1.2.0)
+    rack-protection (2.1.0)
+      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -209,6 +226,8 @@ DEPENDENCIES
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  omniauth-rails_csrf_protection (~> 1.0)
+  omniauth-twitter (~> 1.4)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
