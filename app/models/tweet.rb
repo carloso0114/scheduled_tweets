@@ -6,7 +6,7 @@ class Tweet < ApplicationRecord
   validates :publish_at, presence: true
 
   after_initialize do
-    self.publish_at ||= 24.hour.from_now
+    self.publish_at ||= 19.hour.from_now
   end
 
   after_save_commit do
