@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
     before_action :set_current_user
-    before_action :set_time
 
     def set_current_user
         if session[:user_id]
@@ -12,9 +11,5 @@ class ApplicationController < ActionController::Base
         redirect_to sign_in_path, alert:"You must be signed in to do that." if Current.user.nil?
     end
 
-    before_action :set_time
 
-    def set_time
-        @time = Time.now
-    end
 end
